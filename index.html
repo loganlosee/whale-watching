@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERC-20 Token Transaction Filter</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <script src="./assets/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ERC-20 Token Transaction Filter</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Filter ERC-20 Token Transactions</h2>
+            <form id="filter-form">
+                <label for="min-size">Minimum Transfer Amount (usd):</label>
+                <input type="number" id="min-size" step="0.01" min="0" placeholder="0">
+                <br>
+                <label for="max-size">Maximum Transfer Amount (usd):</label>
+                <input type="number" id="max-size" step="0.01" min="0" placeholder="1000">
+                <br>
+                <label for="start-time">Start Time:</label>
+                <input type="datetime-local" id="start-time">
+                <br>
+                <label for="end-time">End Time:</label>
+                <input type="datetime-local" id="end-time">
+                <br>
+                <button type="submit">Filter</button>
+            </form>
+        </section>
+        <section>
+            <h2>Filtered Token Transactions</h2>
+            <ul id="transaction-list">
+                <!-- This is where filtered token transactions will be displayed -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Root Freak</p>
+    </footer>
+</body>
+</html>
